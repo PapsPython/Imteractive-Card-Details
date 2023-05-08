@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>FrontEnd Mentor Interactive Card Component</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+<body>
+  <main class="container">
+    
+    <section class="cardimagery">
+      <img src="images/bg-card-back.png" alt="image of cardback">
+      <small class="templatecvc">000</small>
+    </section>
+    
+     <form id="form">
+       <div>
+        <label for="cardname"> Cardholder Name </label>
+        <input type="text" id="cardname"
+          name="cardname" placeholder="e.g Jane Appleseed"
+          required>
+         <small class="errmessage"></small>
+       </div>             
+
+       <div>
+        <label for="cardnumber"> Card Number </label>
+        <input type="text" id="cardnumber"
+          name="cardnumber" placeholder="e.g 1234 5678 9123 0000"
+          required pattern="[0-9]{16}"  inputmode="numeric"
+          title="Card Number should be exactly 16 numbers">
+         <small class="errmessage"></small>
+       </div>
+       
+        <div class="horizontalalignedinputs">
+          
+            <div class="monthsection">
+                 <label for="monthnumber">Exp.Date</label>
+                <input type="text" id="monthnumber"
+                  name="monthnumber" placeholder="MM"
+                  required pattern="[0-9]{1,2}" title="Month should be between 1 and 12" inputmode="numeric">
+              <small class="errmessage"></small>
+              </div>
+
+              <div class="yearsection">  
+                   <label for="yearnumber">(MM/YY)</label>
+                  <input type="text" id="yearnumber"
+                    name="yearnumber" placeholder="YY"
+                    required pattern="[0-9]{1,2}" title="Year should be between 19 and 27" inputmode="numeric">  
+                <small class="errmessage"></small>
+              </div> 
+      
+               <div class="cvcsection">  
+                     <label for="cvc">CVC</label>
+                  <input type="text" id="cvcnumber"
+                    name="cvc" placeholder="e.g 123"
+                    required pattern="[0-9]{3}" title="CVC should be exactly 3 digits" inputmode="numeric">  
+                 <small class="errmessage"></small>
+               </div>
+           </div> 
+       
+       <button type="submit"> Confirm</button>
+        
+      </form>
+       
+  </main>  
+ <div class ="frontofcard">
+   <img src="images/card-logo.svg" alt="logo">
+   <p>0000 0000 0000 0000</p>
+
+    <div>
+      <span> JANE APPLESEED</span>
+      <span>00/00</span>
+    </div>   
+  
+ </div>
+    
+  
+  <script src="script.js" defer></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
