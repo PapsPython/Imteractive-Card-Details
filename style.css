@@ -148,14 +148,15 @@ button{
   border: none;
 }
 
-/* small{
+small{
   color:var(--primary-inputerror-color);
   font-size: 0.6rem;
-} */
+}
 
-/* .gratitudemsg{
-  text-align: center;
-} */
+.gratitudemsg{
+  text-align: center ;
+   
+}
 
 
 
